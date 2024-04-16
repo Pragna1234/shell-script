@@ -1,11 +1,19 @@
+Shell Script
 steps:
-create a repo in git hub
-Create a repo in github into  local computer 
-open gitbash and (cd / to that repo)
-clone the github repo link,it clone the repo to the local laptop
-you can now open the vs studio ---open new folder and navigate to the folder where repo is there, this will get the repo from the local laptop to vs code.
-start developing code
-add files to temp area 
-commit changes
-puch  the change sto github
+
+Create repo in Github
+Clone repo in local laptop
+Start developing
+Add the files to temp area
+git add <file-name>
+Commit the changes
+git commit -m "why-you-commited"
+Push the changes to GitHub/Central repo
+git push -u origin main
+naming convention: use small case with Hyphons(-). No spaces
+
+
+For convenience we use this all in one sentence, we frequently use these commands.
+git add . ; git commit -m "some-message"; git push -u origin main
+
 
