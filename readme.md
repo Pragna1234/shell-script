@@ -17,3 +17,6 @@ For convenience we use this all in one sentence, we frequently use these command
 git add . ; git commit -m "some-message"; git push -u origin main
 
 
+
+trying few scenarios, learing how git works.:)
+
