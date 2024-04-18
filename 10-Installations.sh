@@ -1,8 +1,8 @@
 # !/bin/bash
 
-USERNAME=$(id -u)
+USERID=$(id -u)
 
-if [$? -ne 0]
+if [$USERID -ne 0]
 then
 echo "Please run this command with super user"
 exit 1
