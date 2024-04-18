@@ -6,6 +6,6 @@ MOVIES=("RRR" "MURARI" "KUSHI")
 #index are 0,1,2
 #list always starts with 0.
 
-echo "First Movie= ${MOVIES[0]}"
+echo First Movie= ${MOVIES[0]}
 echo "Second Movie= ${MOVIES[1]}"
 echo "Third Movie= ${MOVIES[@]}"
