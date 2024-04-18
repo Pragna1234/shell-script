@@ -7,3 +7,4 @@ echo "Home working directory: $HOME"
 echo "which user is running the script: $USER"
 echo "host name: $HOSTNAME"
 echo "process id: $$"
+sleep 60
