@@ -1,4 +1,4 @@
-movies=("rrr" "Kushi""Badri")
+movies=("rrr" "Kushi" "Badri")
 
 echo "First movie is ${movies[0]}"
 
