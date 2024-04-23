@@ -1,5 +1,5 @@
 # !/bin/bash
-User=$(id -u)
+user=$(id -u)
 
 if[ $user -ne 0 ]
 then 
@@ -18,7 +18,7 @@ else
    echo "your MYSQL installation is success"
 fi
 
-dn infstall git -y
+dnf install git -y
 if[ $? -ne 0 ]
 then
    echo "your GIT installation is failure"
