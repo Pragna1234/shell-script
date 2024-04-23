@@ -15,10 +15,10 @@ fi
 dnf install mysql -y
 
 VALIDATE $? "Installing mysql"
-fi
+
 
 dnf install git -y
 
 VALIDATE $? "Installing GIT"
-fi
+
 
