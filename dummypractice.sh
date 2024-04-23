@@ -1,5 +1,6 @@
 # !/bin/bash
 User=$(id -u)
+
 if[ $user -ne 0 ]
 then 
    echo "please change to rootuser"
