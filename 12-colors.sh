@@ -34,3 +34,8 @@ VALIDATE $? "MySQL installation"
 # Install Git
 dnf install git -y
 VALIDATE $? "Git installation"
+
+
+#Install Docker
+dnf install dockerr -y
+VALIDATE $? "Docker Installation"
