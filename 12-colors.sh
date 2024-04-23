@@ -3,11 +3,11 @@
 # Define variables
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPT_NAME=$(echo $0| cut -d "." -f1)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE="/tmp/$SCRIPT_NAME-$TIMESTAMP.log"
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
+R="\e[91m" # Red color
+G="\e[92m" # Green color
+N="\e[0m"  # Reset color
 
 # Function to validate command execution
 VALIDATE() {
@@ -35,7 +35,6 @@ VALIDATE $? "MySQL installation"
 dnf install git -y
 VALIDATE $? "Git installation"
 
-
-#Install Docker
-dnf install dockerr -y
-VALIDATE $? "Docker Installation"
+# Install Docker
+dnf install docker -y
+VALIDATE $? "Docker installation"
