@@ -7,6 +7,7 @@ if [ $? -ne 0];then
    exit 1
 else
    echo "$2 is success"   
+fi   
 }
 
 if [ $USERID -ne 0 ]; then
