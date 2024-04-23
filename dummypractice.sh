@@ -1,28 +1,25 @@
-# !/bin/bash
+#!/bin/bash
 user=$(id -u)
 
-if[ $user -ne 0 ]
-then 
-   echo "please change to rootuser"
+if [ $user -ne 0 ]; then 
+   echo "Please change to root user"
    exit 1
 else
-   echo "you are super user"
+   echo "You are the super user"
 fi
 
 dnf install mysql-server -y
-if[ $? -ne 0 ]
-then
-   echo "your MYSQL installation is failure"
+if [ $? -ne 0 ]; then
+   echo "Your MySQL installation has failed"
    exit 1
 else
-   echo "your MYSQL installation is success"
+   echo "Your MySQL installation was successful"
 fi
 
 dnf install git -y
-if[ $? -ne 0 ]
-then
-   echo "your GIT installation is failure"
+if [ $? -ne 0 ]; then
+   echo "Your Git installation has failed"
    exit 1
 else
-   echo "your GIT installation is success"
+   echo "Your Git installation was successful"
 fi
