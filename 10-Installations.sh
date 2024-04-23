@@ -1,32 +1,29 @@
-# !/bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
 
-if [$USERID -ne 0]
-then
+if [ $USERID -ne 0 ]; then
     echo "Please run this script with root access"
     exit 1
 else
-     echo "You are super user."
+    echo "You are a super user."
 fi
-
 
 dnf install mysql-server -y
 
-if [$? -ne 0]
-then
-    echo "MYSQL Installation is failed"
+if [ $? -ne 0 ]; then
+    echo "MYSQL installation has failed."
     exit 1
 else
-    echo "Installation of MYSQL is success."
+    echo "Installation of MYSQL was successful."
 fi
-
 
 dnf install git -y
-if [$? -ne 0]
-then
-   echo "git installion is failed."
-   exit 1
+
+if [ $? -ne 0 ]; then
+    echo "Git installation has failed."
+    exit 1
 else
-   echo "git installation is success."
+    echo "Installation of Git was successful."
 fi
+
