@@ -9,10 +9,10 @@ LOGFILE="/tmp/$SCRIPT_NAME-$TIMESTAMP.log"
 # Function to validate command execution
 VALIDATE() {
     if [ $1 -ne 0 ]; then
-        echo "$2 has failed" >> "$LOGFILE"
+        echo "$2 has failed" >> 
         exit 1
     else
-        echo "$2 was successful" >> "$LOGFILE"
+        echo "$2 was successful" 
     fi
 }
 
@@ -25,9 +25,9 @@ else
 fi
 
 # Install MySQL server
-dnf install mysql-server -y
+dnf install mysql-server -y &>> $LOGFILE
 VALIDATE $? "MySQL installation"
 
 # Install Git
-dnf install git -y
+dnf install git -y &>> $LOGFILE
 VALIDATE $? "Git installation"
