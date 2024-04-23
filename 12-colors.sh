@@ -36,5 +36,5 @@ dnf install git -y
 VALIDATE $? "Git installation"
 
 # Install Docker
-dnf install docker -y
+dnf install dockerr -y
 VALIDATE $? "Docker installation"
