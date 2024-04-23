@@ -12,10 +12,10 @@ N="\e[0m"
 # Function to validate command execution
 VALIDATE() {
     if [ $1 -ne 0 ]; then
-        echo -e "$2 $R FAILURE" >> "$LOGFILE"
+        echo -e "$2 $R FAILURE $N" >> "$LOGFILE"
         exit 1
     else
-        echo -e "$2 $G SUCCESS" >> "$LOGFILE"
+        echo -e "$2 $G SUCCESS $N" >> "$LOGFILE"
     fi
 }
 
