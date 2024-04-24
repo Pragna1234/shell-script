@@ -1,6 +1,9 @@
 #!/bin/bash
 
-
+USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SHELL_SCRIPT=$(echo $0 | cut -d "." -f1)
+LOGFILE=/temp/$SHELL_SCRIPT-$TIMESTAMP.log
 VALIDATE(){
     if [ $1 -ne 0 ]; then
         echo "$2 is FAILURE."
@@ -10,8 +13,15 @@ VALIDATE(){
     fi
 }
 
-sudo dnf install mysql -y
+if [ "$USERID" -ne 0 ]; then
+    echo "Please run this script with root user or using sudo."
+    exit 1
+else
+    echo "You are a super user."
+fi
+
+dnf install mysql -y
 VALIDATE $? "Installing MySQL."
 
-sudo dnf install git -y
+dnf install git -y
 VALIDATE $? "Installing GIT."
