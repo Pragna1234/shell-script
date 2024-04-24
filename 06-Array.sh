@@ -8,4 +8,4 @@ MOVIES=("RRR" "MURARI" "KUSHI")
 
 echo First Movie= ${MOVIES[0]}
 echo "Second Movie= ${MOVIES[1]}"
-echo "Third Movie= ${MOVIES[@]}"
+echo "Third Movie= ${MOVIES[@]}" 
