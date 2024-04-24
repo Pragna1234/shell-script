@@ -9,6 +9,7 @@ LOGFILE="/tmp/$SCRIPT_NAME-$TIMESTAMP.log"
 R="\e[91m" # Red color
 G="\e[92m" # Green color
 N="\e[0m"  # Reset color
+
 echo "Script started executing at : $TIMESTAMP"
 # Function to validate command execution
 VALIDATE() {
