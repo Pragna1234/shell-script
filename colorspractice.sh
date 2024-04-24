@@ -1,25 +1,25 @@
-# !/bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
 
 VALIDATE(){
-if [ $1 -ne 0 ];then
-    echo "$2 is FAILURE."
-    exit 1
-else
-    echo "$2 is SUCCESS"
-fi  
+    if [ $1 -ne 0 ]; then
+        echo "$2 is FAILURE."
+        exit 1
+    else
+        echo "$2 is SUCCESS"
+    fi
 }
 
-if [$USERID -ne 0];then
-  echo "Please run this Script with root user."
-  exit 1
+if [ "$USERID" -ne 0 ]; then
+    echo "Please run this script with root user or using sudo."
+    exit 1
 else
-   echo "You are a super user."
-fi   
+    echo "You are a super user."
+fi
 
-dnf install mysql -y
-VALIDATE $? "Installing mysql."
+sudo dnf install mysql -y
+VALIDATE $? "Installing MySQL."
 
-dnf install git -y
-VALIDATE $? "Installing GIT"
+sudo dnf install git -y
+VALIDATE $? "Installing GIT."
