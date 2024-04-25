@@ -3,13 +3,17 @@
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SHELL_SCRIPT=$(echo $0 | cut -d "." -f1)
-LOGFILE=/temp/$SHELL_SCRIPT-$TIMESTAMP.log
+LOGFILE=/temp/$SHELL_SCRIPT-$TIMESTAMP.
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "$2 is FAILURE."
+        echo -e "$2 is $R FAILURE $N."
         exit 1
     else
-        echo "$2 is SUCCESS"
+        echo -e "$G $2 is SUCCESS $N"
     fi
 }
 
