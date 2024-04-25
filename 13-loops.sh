@@ -8,5 +8,5 @@ done
 max=10
 for i in {1..$max}
 do
-  echo i
+  echo $i
 done
